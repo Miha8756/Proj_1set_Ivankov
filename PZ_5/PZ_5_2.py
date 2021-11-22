@@ -4,14 +4,13 @@
 # С помощью этой функции последовательно дообавить к данному числу K справа
 # данные цифры D1 и D2, выводя результат каждого добавления.
 def add_right_digit(d, k):
-    k = a
-    d = d1
-    s = k * 10 + d
+    s = d * 10 + k
     return s
 
 
 a = int(input('Введите K: '))
 d1 = int(input('Введите D1: '))
-print(add_right_digit(a, d1))
+a = add_right_digit(a, d1)
+print(a)
 d2 = int(input('Введите D2: '))
 print(add_right_digit(a, d2))
