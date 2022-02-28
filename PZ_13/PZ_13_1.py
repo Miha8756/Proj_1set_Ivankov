@@ -6,5 +6,8 @@
 from random import randint
 from statistics import mean
 
-n = [randint(0, 100) for i in range(int(input('Введите количество чисел в последовательности: ')))]
-print([i for i in n if i % 2 == 0], '\n', mean([i for i in n if i % 2 == 0]), '\n', mean([j for j in n if j % 2 != 0]))
+n = [randint(0, 100) for i in range(int(input('Введите количество чисел в последовательности:')))]
+print('Начальный список: ', *n, '\n' + 'Список чётных чисел:', *[i for i in n if i % 2 == 0],
+      '\n' + 'Среднее арифметическое чётных чисел:', mean([i for i in n if i % 2 == 0]),
+      '\n' + 'Список нечётных чисел:', *[j for j in n if j % 2 != 0], '\n' + 'Среднее арифметическое нечётных чисел:',
+      mean([j for j in n if j % 2 != 0]))
