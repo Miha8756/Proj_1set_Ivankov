@@ -2,8 +2,15 @@
 #  (например, 1821 года, 1837 год, 1843 году и так далее по всему тексту)
 #  Посчитать количество полученных элементов.
 import re
+p = re.compile(r"\d{4}\W+\d{4}\s\w+")
+g = re.compile(r"\d{4}\s\w+")
+result = []
+for i in open('Dostoevsky.txt').read().split('\n'):
+    if len(p.findall(i)) > 0:
+        result.append(p.findall(i))
+    else:
+        result.append(g.findall(i))
+for i in result:
+    if len(i) > 0:
+        print(*i)
 
-with open('Dostoevsky.txt', 'r', encoding='utf-8') as file:
-    result = re.findall('\d{4}', file.read())
-print('Годы деятельности писателя:', *result)
-print(f'Количество годов деятельности Достоевского: {len(result)}')
