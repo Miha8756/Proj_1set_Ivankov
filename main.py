@@ -1,6 +1,6 @@
 import module
-from figures import circle_area
-print(circle_area())
+from figures import circle_area as c_a
+print(c_a())
 
 #  module.get_set()
 
