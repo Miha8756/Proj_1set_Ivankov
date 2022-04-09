@@ -1,4 +1,6 @@
 import module
+from figures import circle_area
+print(circle_area())
 
 #  module.get_set()
 
@@ -6,7 +8,7 @@ import module
 
 #  print(module.list_doc.doc)
 
-print(module.file_doc.doc)
+# !!! print(module.file_doc.doc)
 
 # print(module.get_binary())
 
